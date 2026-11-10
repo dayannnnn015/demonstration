@@ -1,0 +1,46 @@
+-- The learner's address, as the school's own learner information carries it.
+--
+-- This opens one field of the **learner fields and class capacity** gate, and
+-- only that field, on the user's explicit decision of 2026-11-04. The gate is
+-- recorded in docs/constraints.md as blocking "additional profile fields" until
+-- the school supplies a reviewed field list, and it stays shut for everything
+-- else: no mother tongue, no religion, no indigenous-group field, no parent or
+-- guardian, no contact number, no barangay or municipality broken out of this
+-- one line. Each of those is a field about a child or their family that would
+-- be held for 897 real learners, and which of them the school may lawfully keep
+-- is the school's answer to give, not ours to assume from a form we have seen.
+--
+-- Deliberately one nullable line of text.
+--
+-- Nullable, because every learner already on file has no address recorded and
+-- absence of a record is not evidence of anything: a learner whose address the
+-- school has not written down reads as unrecorded, never as blank or empty.
+-- Requiring it would also have made the roster import refuse a class list the
+-- school already keeps without one.
+--
+-- One line, not a structured address, because EDUNEXUS has no document telling
+-- it which parts the school's forms print or in what order. A house number,
+-- street, barangay, municipality and province broken into columns would be five
+-- guesses at the school's own format; one line is what the school's own forms
+-- and spreadsheets carry, and it is what the registry can hold honestly today.
+--
+-- Almost nothing else is needed for it. `edunexus.learners` already has its
+-- `version_record` and `audit_record` triggers, its manager-only insert and
+-- update policies and its `can_read_learner` read policy from 0004, so the
+-- column inherits the version check, the change journal and the row security
+-- without a line of new SQL. The learner writers are ordinary statements in
+-- `src/modules/registry/service.ts` under those policies rather than security
+-- definer functions, so there is no function to replace either. The one thing
+-- that *is* needed is the column grant at the foot of this file.
+alter table edunexus.learners add column address text
+  check(address is null or (length(btrim(address)) between 1 and 300 and address !~ '[[:cntrl:]]'));
+
+-- 0004 grants insert and update on `edunexus.learners` **column by column**, so
+-- that `version`, `created_at`, `updated_at`, `merged_into` and
+-- `identity_revision` cannot be written by the API at all -- they belong to the
+-- triggers and to the reviewed identity workflow. A new column is therefore not
+-- writable until it is granted, which is the control doing its job: without
+-- these two lines registering a learner answers "permission denied for column
+-- address" as a 403, which is how this was found. Only this column is added;
+-- nothing else becomes writable.
+grant insert(address),update(address) on edunexus.learners to edunexus_app;

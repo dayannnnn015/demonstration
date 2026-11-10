@@ -1,0 +1,33 @@
+/* Self-hosted: no school staff IP reaches a third party and the CSP stays
+   same-origin (`font-src 'self'`). Latin subset, variable axes, so one file per
+   family covers every weight the interface uses. */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../fonts/inter-variable.woff2') format('woff2');
+}
+
+/* Identifiers only — LRNs, school IDs, audit table names. A 12-digit LRN is
+   transcribed from paper, so 0/O and 1/l have to be told apart at a glance. */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('../fonts/jetbrains-mono-variable.woff2') format('woff2');
+}
+
+/* The reading-friendly typeface on My profile → Accessibility: the Braille
+   Institute's Atkinson Hyperlegible Next, drawn so that letters easily mistaken
+   for one another (I l 1, O 0, rn m) are told apart. SIL Open Font License 1.1,
+   in OFL-atkinson-hyperlegible-next.txt beside the file. */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('../fonts/atkinson-hyperlegible-next-variable.woff2') format('woff2');
+}

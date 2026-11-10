@@ -1,0 +1,23 @@
+-- Every learner an adviser brings in is approved by the office first —
+-- individually as well as in a class list.
+--
+-- `register_learner_into_section` (0054, re-created in 0056) let an adviser
+-- create a learner record and enrol them in one step, with no review. It was
+-- asked for, and the school has now asked for the opposite: *"even individual
+-- registration should be reviewed by the AO/Principal"* (2026-11-07). One
+-- learner is a one-row class list, which `roster_submissions` already carries
+-- and `decide_roster_submission` already approves, so there is one reviewed
+-- workflow rather than a reviewed one and an unreviewed one beside it.
+--
+-- **The grant is withdrawn rather than the function dropped.** Dropping it
+-- would rewrite history: 0054 and 0056 are applied migrations and the function
+-- they describe must still be there to read. Withdrawing the grant is what
+-- actually stops it — the runtime connects as `edunexus_app` and nothing else
+-- may execute it — and it is one line to put back if the school changes its
+-- mind. The duplicate guard inside it is not lost either: `register_learner`
+-- (0062) and the reviewed import both carry the same check.
+--
+-- The adviser's other two writes are untouched. Taking an already-registered
+-- learner into a class they advise, and taking one back out again, create no
+-- learner record and stay exactly as they were.
+revoke execute on function edunexus.register_learner_into_section(uuid,jsonb,date,text) from edunexus_app;

@@ -1,0 +1,3890 @@
+{
+  "migrations": [
+    {
+      "file": "0001_foundation.sql",
+      "sha256": "ed6477ceac28bc571773ae78ddeaf382e5b17887cd3742280b4291aaa9a5fc1f"
+    },
+    {
+      "file": "0002_request_limits.sql",
+      "sha256": "248db31f7430a016ab57ead082c5697f20cd5ec6e3f936a90428f39d34222391"
+    },
+    {
+      "file": "0003_readiness.sql",
+      "sha256": "38c69d21816e71b3390baaad15efc4f8810783cbb9258d3b278b4ee464b43990"
+    },
+    {
+      "file": "0004_learner_registry.sql",
+      "sha256": "4ef5f6cc40dac9bc61bf0c092947bc07abb9aa9e4fff76e909ccf8c7abf7794d"
+    },
+    {
+      "file": "0005_registry_review.sql",
+      "sha256": "adff1f43a879fd8e3a8b2ecbd9301b9ce71dd891a2da604d12c2b0ae26463a4b"
+    },
+    {
+      "file": "0006_enrollment_timeline.sql",
+      "sha256": "46937f1e9c46f03997c074bcc9c2c37b97351787b69e75386106d244dd142ce2"
+    },
+    {
+      "file": "0007_learner_reconciliation.sql",
+      "sha256": "7f1bd8458f4472aa5bcfc4cabc4fe5476080243b30c8880900c0a1743583ab92"
+    },
+    {
+      "file": "0008_enrollment_record_review.sql",
+      "sha256": "55811cddac3b5a453f5afe20567b52eabca723c97abe74363f6b41e05ff304ef"
+    },
+    {
+      "file": "0009_grade_placement_review.sql",
+      "sha256": "01e6276c17a5f132c6e85a312544694148ec347a76f9b92c57bae39b08dded0b"
+    },
+    {
+      "file": "0010_instructional_calendar.sql",
+      "sha256": "b44b264c1955a2fe69ffe2a9ccaf0031b8687b5a0a6061a0f907b95d14f0389a"
+    },
+    {
+      "file": "0011_daily_attendance.sql",
+      "sha256": "a52ec3881b4eb2c532e12b76306136ce8e55eaffdcc6e735a766a7761591db19"
+    },
+    {
+      "file": "0012_monthly_attendance.sql",
+      "sha256": "1b4be50833356ce8d730e30624c0d91ebc9a476463e5fcd9629a18b5fdf067d4"
+    },
+    {
+      "file": "0013_attendance_monitor.sql",
+      "sha256": "ea99c621cdc9cbca04338c135529af7484eecaf0f563c96096b03b169d92f837"
+    },
+    {
+      "file": "0014_attendance_followups.sql",
+      "sha256": "1356e9ce7cedc10271aecd30290cc044521200221526615e1418d88cf2d7e200"
+    },
+    {
+      "file": "0015_subject_catalog.sql",
+      "sha256": "f1dc3dfd9d16eb522cfbdbfa088d548d2e8d4319e43aa659cc62152273c7072a"
+    },
+    {
+      "file": "0016_section_subjects.sql",
+      "sha256": "92fd838192775effc7c0983e72f4b39b82869cc84218ee020431a4f71e60a52e"
+    },
+    {
+      "file": "0017_assessment_policy_drafts.sql",
+      "sha256": "8dd8307be8c26291fe0c5a711ea0b355a8bca5b3c0ecd528995facf699ab2518"
+    },
+    {
+      "file": "0018_assessment_policy_adoptions.sql",
+      "sha256": "fe58f55c28bf7e51b888f8b61aff9bf884e41224e97078109ea05b197b1e6ad2"
+    },
+    {
+      "file": "0019_assessment_policy_bindings.sql",
+      "sha256": "8cdfd5156c456a20dcadb96fd966fb40fc6c93961570e11e848d26a17a7302c7"
+    },
+    {
+      "file": "0020_staff_invitations.sql",
+      "sha256": "7ec85331553a5e4bf71fba0d246ef2b3280a43c645f476d2b13bcce18ec0180c"
+    },
+    {
+      "file": "0021_assessment_scores.sql",
+      "sha256": "3277c3c122b63432a007d2ef18428eabd06b547ad081756d25a1739bb3338b04"
+    },
+    {
+      "file": "0022_assessment_score_corrections.sql",
+      "sha256": "2eb42ced96f46791667d22a303f50637de2e999236bc16e704e2d27cf5121ef8"
+    },
+    {
+      "file": "0023_attendance_read_lock.sql",
+      "sha256": "4d85573fb8f19aed7702194fae347571b953f12fe2f2de913bcffd16d3abda7e"
+    },
+    {
+      "file": "0024_assessment_components_read.sql",
+      "sha256": "3baf4a140fbd186328c2b218dda1b9797d7d4caa99fd5ba7904ae0be9f6b0393"
+    }
+  ],
+  "columns": [
+    {
+      "table_name": "academic_years",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "academic_years",
+      "column_name": "start_year",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "academic_years",
+      "column_name": "starts_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "academic_years",
+      "column_name": "ends_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "academic_years",
+      "column_name": "status",
+      "data_type": "USER-DEFINED",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "academic_years",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "academic_years",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "academic_years",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "column_name": "adoption_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "column_name": "adoption_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "column_name": "before_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "column_name": "after_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "policy_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "policy_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "policy_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "grade_levels",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "adopted_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "adoption_reference",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "column_name": "binding_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "column_name": "binding_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "column_name": "before_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "column_name": "after_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "column_name": "offering_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "column_name": "adoption_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "column_name": "status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "column_name": "policy_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "column_name": "policy_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "column_name": "before_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "column_name": "after_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "column_name": "code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "column_name": "name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "column_name": "source_reference",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "column_name": "grade_levels",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "column_name": "components",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "column_name": "status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_score_events",
+      "column_name": "id",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_score_events",
+      "column_name": "task_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_score_events",
+      "column_name": "entries",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_score_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_score_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_score_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_score_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_scores",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_scores",
+      "column_name": "task_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_scores",
+      "column_name": "enrollment_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_scores",
+      "column_name": "raw_score",
+      "data_type": "numeric",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "assessment_scores",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_scores",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_scores",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "column_name": "task_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "column_name": "task_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "column_name": "before_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "column_name": "after_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "offering_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "binding_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "reporting_period_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "component_code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "sequence",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "title",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "max_score",
+      "data_type": "numeric",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_days",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_days",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_days",
+      "column_name": "day_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_days",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_days",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_days",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "column_name": "case_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "column_name": "case_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "column_name": "review_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "column_name": "review_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "enrollment_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "from_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "to_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "category",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "assignee_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "due_on",
+      "data_type": "date",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "opening_evidence",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "opening_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "created_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_followups",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_marks",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_marks",
+      "column_name": "attendance_day_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_marks",
+      "column_name": "enrollment_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_marks",
+      "column_name": "day_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_marks",
+      "column_name": "am",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "attendance_marks",
+      "column_name": "pm",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "attendance_marks",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_marks",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_marks",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "month_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "month_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "snapshot_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "review_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "review_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_snapshots",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_snapshots",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_snapshots",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_snapshots",
+      "column_name": "month_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_snapshots",
+      "column_name": "payload",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_snapshots",
+      "column_name": "data_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_month_snapshots",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_months",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_months",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_months",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_months",
+      "column_name": "month_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_months",
+      "column_name": "status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_months",
+      "column_name": "snapshot_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_months",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_months",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_months",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "column_name": "attendance_day_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "column_name": "attendance_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "column_name": "review_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "column_name": "review_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "audit_events",
+      "column_name": "id",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "audit_events",
+      "column_name": "occurred_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "audit_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "audit_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "audit_events",
+      "column_name": "operation",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "audit_events",
+      "column_name": "entity_table",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "audit_events",
+      "column_name": "entity_id",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "audit_events",
+      "column_name": "changed_fields",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "column_name": "calendar_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "column_name": "review_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "column_name": "review_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_correction_sections",
+      "column_name": "correction_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_correction_sections",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "enrollment_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "enrollment_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "before_entries",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "after_entries",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "first_affected_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "review_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "transaction_id",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "correction_kind",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "previous_grade_level",
+      "data_type": "smallint",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "column_name": "corrected_grade_level",
+      "data_type": "smallint",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "enrollment_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_events",
+      "column_name": "enrollment_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_events",
+      "column_name": "enrollment_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_events",
+      "column_name": "event_type",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_events",
+      "column_name": "effective_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_events",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "enrollment_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "enrollment_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "enrollment_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "reason_code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "replacement_enrollment_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "review_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "review_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "column_name": "transaction_id",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "learner_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "grade_level",
+      "data_type": "smallint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "enrolled_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "effective_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "last_reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "enrollments",
+      "column_name": "record_state",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_previews",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_previews",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_previews",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_previews",
+      "column_name": "input_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_previews",
+      "column_name": "plan_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_previews",
+      "column_name": "row_count",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_previews",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_previews",
+      "column_name": "expires_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "import_previews",
+      "column_name": "committed_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "import_previews",
+      "column_name": "receipt",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "instructional_calendars",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "instructional_calendars",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "instructional_calendars",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "instructional_calendars",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "day_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "configured",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "am",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "pm",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "day_type",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "label",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "instructional_days",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "canonical_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "duplicate_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "canonical_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "duplicate_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "before_canonical",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "before_duplicate",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "enrollment_ids",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "review_hash",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "column_name": "transaction_id",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "lrn",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "first_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "middle_name",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "last_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "name_extension",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "birth_date",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "sex",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "merged_into",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "learners",
+      "column_name": "identity_revision",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "column_name": "learner_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "column_name": "learner_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "column_name": "previous_lrn",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "column_name": "corrected_lrn",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "column_name": "transaction_id",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "record_access_events",
+      "column_name": "id",
+      "data_type": "bigint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "record_access_events",
+      "column_name": "occurred_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "record_access_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "record_access_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "record_access_events",
+      "column_name": "resource",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "record_access_events",
+      "column_name": "record_ids",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "reporting_periods",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "reporting_periods",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "reporting_periods",
+      "column_name": "ordinal",
+      "data_type": "smallint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "reporting_periods",
+      "column_name": "name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "reporting_periods",
+      "column_name": "starts_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "reporting_periods",
+      "column_name": "ends_on",
+      "data_type": "date",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "reporting_periods",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "reporting_periods",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "reporting_periods",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "request_buckets",
+      "column_name": "user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "request_buckets",
+      "column_name": "window_start",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "request_buckets",
+      "column_name": "request_count",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "school_profile",
+      "column_name": "id",
+      "data_type": "smallint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "school_profile",
+      "column_name": "name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "school_profile",
+      "column_name": "school_code",
+      "data_type": "text",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "school_profile",
+      "column_name": "address",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "school_profile",
+      "column_name": "timezone",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "school_profile",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "school_profile",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "school_profile",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subject_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subject_events",
+      "column_name": "offering_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subject_events",
+      "column_name": "offering_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subject_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subject_events",
+      "column_name": "before_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "section_subject_events",
+      "column_name": "after_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subject_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subject_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subject_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subject_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subjects",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subjects",
+      "column_name": "section_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subjects",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subjects",
+      "column_name": "subject_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subjects",
+      "column_name": "subject_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subjects",
+      "column_name": "active",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subjects",
+      "column_name": "display_order",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subjects",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subjects",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "section_subjects",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "sections",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "sections",
+      "column_name": "academic_year_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "sections",
+      "column_name": "grade_level",
+      "data_type": "smallint",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "sections",
+      "column_name": "name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "sections",
+      "column_name": "adviser_user_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "sections",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "sections",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "sections",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff",
+      "column_name": "user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff",
+      "column_name": "display_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff",
+      "column_name": "role",
+      "data_type": "USER-DEFINED",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff",
+      "column_name": "active",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "column_name": "invitation_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "column_name": "invitation_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "column_name": "before_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "column_name": "after_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitations",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitations",
+      "column_name": "email",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitations",
+      "column_name": "display_name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitations",
+      "column_name": "role",
+      "data_type": "USER-DEFINED",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitations",
+      "column_name": "status",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitations",
+      "column_name": "linked_user_id",
+      "data_type": "uuid",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "staff_invitations",
+      "column_name": "requested_by",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitations",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitations",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "staff_invitations",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subject_events",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subject_events",
+      "column_name": "subject_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subject_events",
+      "column_name": "subject_version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subject_events",
+      "column_name": "action",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subject_events",
+      "column_name": "before_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "YES"
+    },
+    {
+      "table_name": "subject_events",
+      "column_name": "after_snapshot",
+      "data_type": "jsonb",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subject_events",
+      "column_name": "reason",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subject_events",
+      "column_name": "actor_user_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subject_events",
+      "column_name": "request_id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subject_events",
+      "column_name": "recorded_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subjects",
+      "column_name": "id",
+      "data_type": "uuid",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subjects",
+      "column_name": "code",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subjects",
+      "column_name": "name",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subjects",
+      "column_name": "kind",
+      "data_type": "text",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subjects",
+      "column_name": "grade_levels",
+      "data_type": "ARRAY",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subjects",
+      "column_name": "active",
+      "data_type": "boolean",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subjects",
+      "column_name": "version",
+      "data_type": "integer",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subjects",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    },
+    {
+      "table_name": "subjects",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "is_nullable": "NO"
+    }
+  ],
+  "constraints": [
+    {
+      "table_name": "academic_years",
+      "conname": "academic_years_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "academic_years",
+      "conname": "academic_years_start_year_key",
+      "contype": "u",
+      "definition": "UNIQUE (start_year)"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "conname": "assessment_policy_adoption_eve_adoption_id_adoption_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (adoption_id, adoption_version)"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "conname": "assessment_policy_adoption_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "conname": "assessment_policy_adoption_events_adoption_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (adoption_id) REFERENCES edunexus.assessment_policy_adoptions(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_adoption_events",
+      "conname": "assessment_policy_adoption_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "conname": "assessment_policy_adoptions_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (academic_year_id) REFERENCES edunexus.academic_years(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "conname": "assessment_policy_adoptions_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "assessment_policy_adoptions",
+      "conname": "assessment_policy_adoptions_policy_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (policy_id) REFERENCES edunexus.assessment_policy_drafts(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "conname": "assessment_policy_binding_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "conname": "assessment_policy_binding_events_binding_id_binding_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (binding_id, binding_version)"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "conname": "assessment_policy_binding_events_binding_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (binding_id) REFERENCES edunexus.assessment_policy_bindings(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_binding_events",
+      "conname": "assessment_policy_binding_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "conname": "assessment_policy_bindings_adoption_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (adoption_id) REFERENCES edunexus.assessment_policy_adoptions(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "conname": "assessment_policy_bindings_offering_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (offering_id) REFERENCES edunexus.section_subjects(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "conname": "assessment_policy_bindings_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "assessment_policy_bindings",
+      "conname": "assessment_policy_bindings_section_id_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id, academic_year_id) REFERENCES edunexus.sections(id, academic_year_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "conname": "assessment_policy_draft_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "conname": "assessment_policy_draft_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "conname": "assessment_policy_draft_events_policy_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (policy_id) REFERENCES edunexus.assessment_policy_drafts(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_policy_draft_events",
+      "conname": "assessment_policy_draft_events_policy_id_policy_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (policy_id, policy_version)"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "conname": "assessment_policy_drafts_code_key",
+      "contype": "u",
+      "definition": "UNIQUE (code)"
+    },
+    {
+      "table_name": "assessment_policy_drafts",
+      "conname": "assessment_policy_drafts_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "assessment_score_events",
+      "conname": "assessment_score_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_score_events",
+      "conname": "assessment_score_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "assessment_score_events",
+      "conname": "assessment_score_events_task_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (task_id) REFERENCES edunexus.assessment_tasks(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_scores",
+      "conname": "assessment_scores_enrollment_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (enrollment_id) REFERENCES edunexus.enrollments(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_scores",
+      "conname": "assessment_scores_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "assessment_scores",
+      "conname": "assessment_scores_task_id_enrollment_id_key",
+      "contype": "u",
+      "definition": "UNIQUE (task_id, enrollment_id)"
+    },
+    {
+      "table_name": "assessment_scores",
+      "conname": "assessment_scores_task_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (task_id) REFERENCES edunexus.assessment_tasks(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "conname": "assessment_task_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "conname": "assessment_task_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "conname": "assessment_task_events_task_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (task_id) REFERENCES edunexus.assessment_tasks(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_task_events",
+      "conname": "assessment_task_events_task_id_task_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (task_id, task_version)"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "conname": "assessment_tasks_binding_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (binding_id) REFERENCES edunexus.assessment_policy_bindings(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "conname": "assessment_tasks_offering_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (offering_id) REFERENCES edunexus.section_subjects(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "conname": "assessment_tasks_offering_id_reporting_period_id_component__key",
+      "contype": "u",
+      "definition": "UNIQUE (offering_id, reporting_period_id, component_code, sequence)"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "conname": "assessment_tasks_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "conname": "assessment_tasks_reporting_period_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (reporting_period_id) REFERENCES edunexus.reporting_periods(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "assessment_tasks",
+      "conname": "assessment_tasks_section_id_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id, academic_year_id) REFERENCES edunexus.sections(id, academic_year_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_days",
+      "conname": "attendance_days_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "attendance_days",
+      "conname": "attendance_days_section_id_day_on_key",
+      "contype": "u",
+      "definition": "UNIQUE (section_id, day_on)"
+    },
+    {
+      "table_name": "attendance_days",
+      "conname": "attendance_days_section_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id) REFERENCES edunexus.sections(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "conname": "attendance_followup_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "conname": "attendance_followup_events_case_id_case_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (case_id, case_version)"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "conname": "attendance_followup_events_case_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (case_id) REFERENCES edunexus.attendance_followups(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_followup_events",
+      "conname": "attendance_followup_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "attendance_followups",
+      "conname": "attendance_followups_assignee_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (assignee_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_followups",
+      "conname": "attendance_followups_created_by_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (created_by) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_followups",
+      "conname": "attendance_followups_enrollment_id_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (enrollment_id, academic_year_id) REFERENCES edunexus.enrollments(id, academic_year_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_followups",
+      "conname": "attendance_followups_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "attendance_followups",
+      "conname": "attendance_followups_section_id_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id, academic_year_id) REFERENCES edunexus.sections(id, academic_year_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_marks",
+      "conname": "attendance_marks_attendance_day_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (attendance_day_id) REFERENCES edunexus.attendance_days(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_marks",
+      "conname": "attendance_marks_enrollment_id_day_on_key",
+      "contype": "u",
+      "definition": "UNIQUE (enrollment_id, day_on)"
+    },
+    {
+      "table_name": "attendance_marks",
+      "conname": "attendance_marks_enrollment_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (enrollment_id) REFERENCES edunexus.enrollments(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_marks",
+      "conname": "attendance_marks_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "conname": "attendance_month_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "conname": "attendance_month_events_month_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (month_id) REFERENCES edunexus.attendance_months(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "conname": "attendance_month_events_month_id_month_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (month_id, month_version)"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "conname": "attendance_month_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "attendance_month_events",
+      "conname": "attendance_month_events_snapshot_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (snapshot_id) REFERENCES edunexus.attendance_month_snapshots(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_month_snapshots",
+      "conname": "attendance_month_snapshots_id_section_id_month_on_key",
+      "contype": "u",
+      "definition": "UNIQUE (id, section_id, month_on)"
+    },
+    {
+      "table_name": "attendance_month_snapshots",
+      "conname": "attendance_month_snapshots_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "attendance_month_snapshots",
+      "conname": "attendance_month_snapshots_section_id_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id, academic_year_id) REFERENCES edunexus.sections(id, academic_year_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_months",
+      "conname": "attendance_months_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "attendance_months",
+      "conname": "attendance_months_section_id_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id, academic_year_id) REFERENCES edunexus.sections(id, academic_year_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_months",
+      "conname": "attendance_months_section_id_month_on_key",
+      "contype": "u",
+      "definition": "UNIQUE (section_id, month_on)"
+    },
+    {
+      "table_name": "attendance_months",
+      "conname": "attendance_months_snapshot_id_section_id_month_on_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (snapshot_id, section_id, month_on) REFERENCES edunexus.attendance_month_snapshots(id, section_id, month_on) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "conname": "attendance_review_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "conname": "attendance_review_events_attendance_day_id_attendance_versi_key",
+      "contype": "u",
+      "definition": "UNIQUE (attendance_day_id, attendance_version)"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "conname": "attendance_review_events_attendance_day_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (attendance_day_id) REFERENCES edunexus.attendance_days(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "attendance_review_events",
+      "conname": "attendance_review_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "audit_events",
+      "conname": "audit_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "conname": "calendar_review_events_academic_year_id_calendar_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (academic_year_id, calendar_version)"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "conname": "calendar_review_events_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (academic_year_id) REFERENCES edunexus.instructional_calendars(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "conname": "calendar_review_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "conname": "calendar_review_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "calendar_review_events",
+      "conname": "calendar_review_events_section_id_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id, academic_year_id) REFERENCES edunexus.sections(id, academic_year_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollment_correction_sections",
+      "conname": "enrollment_correction_sections_correction_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (correction_id) REFERENCES edunexus.enrollment_corrections(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollment_correction_sections",
+      "conname": "enrollment_correction_sections_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (correction_id, section_id)"
+    },
+    {
+      "table_name": "enrollment_correction_sections",
+      "conname": "enrollment_correction_sections_section_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id) REFERENCES edunexus.sections(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "conname": "enrollment_corrections_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "conname": "enrollment_corrections_enrollment_id_enrollment_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (enrollment_id, enrollment_version)"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "conname": "enrollment_corrections_enrollment_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (enrollment_id) REFERENCES edunexus.enrollments(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollment_corrections",
+      "conname": "enrollment_corrections_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "enrollment_events",
+      "conname": "enrollment_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollment_events",
+      "conname": "enrollment_events_enrollment_id_enrollment_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (enrollment_id, enrollment_version)"
+    },
+    {
+      "table_name": "enrollment_events",
+      "conname": "enrollment_events_enrollment_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (enrollment_id) REFERENCES edunexus.enrollments(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollment_events",
+      "conname": "enrollment_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "enrollment_events",
+      "conname": "enrollment_events_section_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id) REFERENCES edunexus.sections(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "conname": "enrollment_record_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "conname": "enrollment_record_events_enrollment_id_enrollment_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (enrollment_id, enrollment_version)"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "conname": "enrollment_record_events_enrollment_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (enrollment_id) REFERENCES edunexus.enrollments(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "conname": "enrollment_record_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "enrollment_record_events",
+      "conname": "enrollment_record_events_replacement_enrollment_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (replacement_enrollment_id) REFERENCES edunexus.enrollments(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollments",
+      "conname": "enrollments_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (academic_year_id) REFERENCES edunexus.academic_years(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollments",
+      "conname": "enrollments_identity_year_key",
+      "contype": "u",
+      "definition": "UNIQUE (id, academic_year_id)"
+    },
+    {
+      "table_name": "enrollments",
+      "conname": "enrollments_learner_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (learner_id) REFERENCES edunexus.learners(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "enrollments",
+      "conname": "enrollments_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "enrollments",
+      "conname": "enrollments_section_id_academic_year_id_grade_level_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id, academic_year_id, grade_level) REFERENCES edunexus.sections(id, academic_year_id, grade_level) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "import_previews",
+      "conname": "import_previews_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "import_previews",
+      "conname": "import_previews_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "instructional_calendars",
+      "conname": "instructional_calendars_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (id) REFERENCES edunexus.academic_years(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "instructional_calendars",
+      "conname": "instructional_calendars_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "instructional_days",
+      "conname": "instructional_days_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (academic_year_id) REFERENCES edunexus.instructional_calendars(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "instructional_days",
+      "conname": "instructional_days_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "instructional_days",
+      "conname": "instructional_days_section_id_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id, academic_year_id) REFERENCES edunexus.sections(id, academic_year_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "conname": "learner_identity_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "conname": "learner_identity_events_canonical_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (canonical_id) REFERENCES edunexus.learners(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "conname": "learner_identity_events_duplicate_id_duplicate_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (duplicate_id, duplicate_version)"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "conname": "learner_identity_events_duplicate_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (duplicate_id) REFERENCES edunexus.learners(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "learner_identity_events",
+      "conname": "learner_identity_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "learners",
+      "conname": "learners_lrn_key",
+      "contype": "u",
+      "definition": "UNIQUE (lrn)"
+    },
+    {
+      "table_name": "learners",
+      "conname": "learners_merged_into_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (merged_into) REFERENCES edunexus.learners(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "learners",
+      "conname": "learners_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "conname": "lrn_corrections_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "conname": "lrn_corrections_learner_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (learner_id) REFERENCES edunexus.learners(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "conname": "lrn_corrections_learner_id_learner_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (learner_id, learner_version)"
+    },
+    {
+      "table_name": "lrn_corrections",
+      "conname": "lrn_corrections_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "record_access_events",
+      "conname": "record_access_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "record_access_events",
+      "conname": "record_access_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "reporting_periods",
+      "conname": "reporting_periods_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (academic_year_id) REFERENCES edunexus.academic_years(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "reporting_periods",
+      "conname": "reporting_periods_academic_year_id_ordinal_key",
+      "contype": "u",
+      "definition": "UNIQUE (academic_year_id, ordinal)"
+    },
+    {
+      "table_name": "reporting_periods",
+      "conname": "reporting_periods_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "request_buckets",
+      "conname": "request_buckets_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (user_id)"
+    },
+    {
+      "table_name": "request_buckets",
+      "conname": "request_buckets_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "school_profile",
+      "conname": "school_profile_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "section_subject_events",
+      "conname": "section_subject_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "section_subject_events",
+      "conname": "section_subject_events_offering_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (offering_id) REFERENCES edunexus.section_subjects(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "section_subject_events",
+      "conname": "section_subject_events_offering_id_offering_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (offering_id, offering_version)"
+    },
+    {
+      "table_name": "section_subject_events",
+      "conname": "section_subject_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "section_subjects",
+      "conname": "section_subjects_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "section_subjects",
+      "conname": "section_subjects_section_id_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (section_id, academic_year_id) REFERENCES edunexus.sections(id, academic_year_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "section_subjects",
+      "conname": "section_subjects_section_id_subject_id_key",
+      "contype": "u",
+      "definition": "UNIQUE (section_id, subject_id)"
+    },
+    {
+      "table_name": "section_subjects",
+      "conname": "section_subjects_subject_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (subject_id) REFERENCES edunexus.subjects(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "sections",
+      "conname": "sections_academic_year_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (academic_year_id) REFERENCES edunexus.academic_years(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "sections",
+      "conname": "sections_adviser_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (adviser_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "sections",
+      "conname": "sections_identity_year_grade_key",
+      "contype": "u",
+      "definition": "UNIQUE (id, academic_year_id, grade_level)"
+    },
+    {
+      "table_name": "sections",
+      "conname": "sections_identity_year_key",
+      "contype": "u",
+      "definition": "UNIQUE (id, academic_year_id)"
+    },
+    {
+      "table_name": "sections",
+      "conname": "sections_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "staff",
+      "conname": "staff_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (user_id)"
+    },
+    {
+      "table_name": "staff",
+      "conname": "staff_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "conname": "staff_invitation_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "conname": "staff_invitation_events_invitation_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (invitation_id) REFERENCES edunexus.staff_invitations(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "conname": "staff_invitation_events_invitation_id_invitation_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (invitation_id, invitation_version)"
+    },
+    {
+      "table_name": "staff_invitation_events",
+      "conname": "staff_invitation_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "staff_invitations",
+      "conname": "staff_invitations_linked_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (linked_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "staff_invitations",
+      "conname": "staff_invitations_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "staff_invitations",
+      "conname": "staff_invitations_requested_by_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (requested_by) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "subject_events",
+      "conname": "subject_events_actor_user_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (actor_user_id) REFERENCES edunexus.staff(user_id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "subject_events",
+      "conname": "subject_events_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "table_name": "subject_events",
+      "conname": "subject_events_subject_id_fkey",
+      "contype": "f",
+      "definition": "FOREIGN KEY (subject_id) REFERENCES edunexus.subjects(id) ON DELETE RESTRICT"
+    },
+    {
+      "table_name": "subject_events",
+      "conname": "subject_events_subject_id_subject_version_key",
+      "contype": "u",
+      "definition": "UNIQUE (subject_id, subject_version)"
+    },
+    {
+      "table_name": "subjects",
+      "conname": "subjects_code_key",
+      "contype": "u",
+      "definition": "UNIQUE (code)"
+    },
+    {
+      "table_name": "subjects",
+      "conname": "subjects_pkey",
+      "contype": "p",
+      "definition": "PRIMARY KEY (id)"
+    }
+  ],
+  "indexes": [
+    {
+      "tablename": "academic_years",
+      "indexdef": "CREATE UNIQUE INDEX academic_years_one_active_idx ON edunexus.academic_years USING btree (status) WHERE (status = 'active'::edunexus.year_status)"
+    },
+    {
+      "tablename": "academic_years",
+      "indexdef": "CREATE UNIQUE INDEX academic_years_pkey ON edunexus.academic_years USING btree (id)"
+    },
+    {
+      "tablename": "academic_years",
+      "indexdef": "CREATE UNIQUE INDEX academic_years_start_year_key ON edunexus.academic_years USING btree (start_year)"
+    },
+    {
+      "tablename": "assessment_policy_adoption_events",
+      "indexdef": "CREATE UNIQUE INDEX assessment_policy_adoption_eve_adoption_id_adoption_version_key ON edunexus.assessment_policy_adoption_events USING btree (adoption_id, adoption_version)"
+    },
+    {
+      "tablename": "assessment_policy_adoption_events",
+      "indexdef": "CREATE UNIQUE INDEX assessment_policy_adoption_events_pkey ON edunexus.assessment_policy_adoption_events USING btree (id)"
+    },
+    {
+      "tablename": "assessment_policy_adoptions",
+      "indexdef": "CREATE UNIQUE INDEX assessment_adoption_active_idx ON edunexus.assessment_policy_adoptions USING btree (academic_year_id, policy_id) WHERE (status = 'adopted'::text)"
+    },
+    {
+      "tablename": "assessment_policy_adoptions",
+      "indexdef": "CREATE UNIQUE INDEX assessment_policy_adoptions_pkey ON edunexus.assessment_policy_adoptions USING btree (id)"
+    },
+    {
+      "tablename": "assessment_policy_binding_events",
+      "indexdef": "CREATE UNIQUE INDEX assessment_policy_binding_events_binding_id_binding_version_key ON edunexus.assessment_policy_binding_events USING btree (binding_id, binding_version)"
+    },
+    {
+      "tablename": "assessment_policy_binding_events",
+      "indexdef": "CREATE UNIQUE INDEX assessment_policy_binding_events_pkey ON edunexus.assessment_policy_binding_events USING btree (id)"
+    },
+    {
+      "tablename": "assessment_policy_bindings",
+      "indexdef": "CREATE UNIQUE INDEX assessment_binding_active_idx ON edunexus.assessment_policy_bindings USING btree (offering_id) WHERE (status = 'bound'::text)"
+    },
+    {
+      "tablename": "assessment_policy_bindings",
+      "indexdef": "CREATE UNIQUE INDEX assessment_policy_bindings_pkey ON edunexus.assessment_policy_bindings USING btree (id)"
+    },
+    {
+      "tablename": "assessment_policy_draft_events",
+      "indexdef": "CREATE UNIQUE INDEX assessment_policy_draft_events_pkey ON edunexus.assessment_policy_draft_events USING btree (id)"
+    },
+    {
+      "tablename": "assessment_policy_draft_events",
+      "indexdef": "CREATE UNIQUE INDEX assessment_policy_draft_events_policy_id_policy_version_key ON edunexus.assessment_policy_draft_events USING btree (policy_id, policy_version)"
+    },
+    {
+      "tablename": "assessment_policy_drafts",
+      "indexdef": "CREATE UNIQUE INDEX assessment_policy_drafts_code_key ON edunexus.assessment_policy_drafts USING btree (code)"
+    },
+    {
+      "tablename": "assessment_policy_drafts",
+      "indexdef": "CREATE UNIQUE INDEX assessment_policy_drafts_pkey ON edunexus.assessment_policy_drafts USING btree (id)"
+    },
+    {
+      "tablename": "assessment_score_events",
+      "indexdef": "CREATE UNIQUE INDEX assessment_score_events_pkey ON edunexus.assessment_score_events USING btree (id)"
+    },
+    {
+      "tablename": "assessment_scores",
+      "indexdef": "CREATE UNIQUE INDEX assessment_scores_pkey ON edunexus.assessment_scores USING btree (id)"
+    },
+    {
+      "tablename": "assessment_scores",
+      "indexdef": "CREATE UNIQUE INDEX assessment_scores_task_id_enrollment_id_key ON edunexus.assessment_scores USING btree (task_id, enrollment_id)"
+    },
+    {
+      "tablename": "assessment_task_events",
+      "indexdef": "CREATE UNIQUE INDEX assessment_task_events_pkey ON edunexus.assessment_task_events USING btree (id)"
+    },
+    {
+      "tablename": "assessment_task_events",
+      "indexdef": "CREATE UNIQUE INDEX assessment_task_events_task_id_task_version_key ON edunexus.assessment_task_events USING btree (task_id, task_version)"
+    },
+    {
+      "tablename": "assessment_tasks",
+      "indexdef": "CREATE UNIQUE INDEX assessment_tasks_offering_id_reporting_period_id_component__key ON edunexus.assessment_tasks USING btree (offering_id, reporting_period_id, component_code, sequence)"
+    },
+    {
+      "tablename": "assessment_tasks",
+      "indexdef": "CREATE UNIQUE INDEX assessment_tasks_pkey ON edunexus.assessment_tasks USING btree (id)"
+    },
+    {
+      "tablename": "attendance_days",
+      "indexdef": "CREATE UNIQUE INDEX attendance_days_pkey ON edunexus.attendance_days USING btree (id)"
+    },
+    {
+      "tablename": "attendance_days",
+      "indexdef": "CREATE UNIQUE INDEX attendance_days_section_id_day_on_key ON edunexus.attendance_days USING btree (section_id, day_on)"
+    },
+    {
+      "tablename": "attendance_followup_events",
+      "indexdef": "CREATE UNIQUE INDEX attendance_followup_events_case_id_case_version_key ON edunexus.attendance_followup_events USING btree (case_id, case_version)"
+    },
+    {
+      "tablename": "attendance_followup_events",
+      "indexdef": "CREATE UNIQUE INDEX attendance_followup_events_pkey ON edunexus.attendance_followup_events USING btree (id)"
+    },
+    {
+      "tablename": "attendance_followups",
+      "indexdef": "CREATE UNIQUE INDEX attendance_followup_open_idx ON edunexus.attendance_followups USING btree (enrollment_id) WHERE (status = 'open'::text)"
+    },
+    {
+      "tablename": "attendance_followups",
+      "indexdef": "CREATE UNIQUE INDEX attendance_followups_pkey ON edunexus.attendance_followups USING btree (id)"
+    },
+    {
+      "tablename": "attendance_marks",
+      "indexdef": "CREATE UNIQUE INDEX attendance_marks_enrollment_id_day_on_key ON edunexus.attendance_marks USING btree (enrollment_id, day_on)"
+    },
+    {
+      "tablename": "attendance_marks",
+      "indexdef": "CREATE UNIQUE INDEX attendance_marks_pkey ON edunexus.attendance_marks USING btree (id)"
+    },
+    {
+      "tablename": "attendance_month_events",
+      "indexdef": "CREATE UNIQUE INDEX attendance_month_events_month_id_month_version_key ON edunexus.attendance_month_events USING btree (month_id, month_version)"
+    },
+    {
+      "tablename": "attendance_month_events",
+      "indexdef": "CREATE UNIQUE INDEX attendance_month_events_pkey ON edunexus.attendance_month_events USING btree (id)"
+    },
+    {
+      "tablename": "attendance_month_snapshots",
+      "indexdef": "CREATE UNIQUE INDEX attendance_month_snapshots_id_section_id_month_on_key ON edunexus.attendance_month_snapshots USING btree (id, section_id, month_on)"
+    },
+    {
+      "tablename": "attendance_month_snapshots",
+      "indexdef": "CREATE UNIQUE INDEX attendance_month_snapshots_pkey ON edunexus.attendance_month_snapshots USING btree (id)"
+    },
+    {
+      "tablename": "attendance_months",
+      "indexdef": "CREATE UNIQUE INDEX attendance_months_pkey ON edunexus.attendance_months USING btree (id)"
+    },
+    {
+      "tablename": "attendance_months",
+      "indexdef": "CREATE UNIQUE INDEX attendance_months_section_id_month_on_key ON edunexus.attendance_months USING btree (section_id, month_on)"
+    },
+    {
+      "tablename": "attendance_review_events",
+      "indexdef": "CREATE UNIQUE INDEX attendance_review_events_attendance_day_id_attendance_versi_key ON edunexus.attendance_review_events USING btree (attendance_day_id, attendance_version)"
+    },
+    {
+      "tablename": "attendance_review_events",
+      "indexdef": "CREATE UNIQUE INDEX attendance_review_events_pkey ON edunexus.attendance_review_events USING btree (id)"
+    },
+    {
+      "tablename": "audit_events",
+      "indexdef": "CREATE UNIQUE INDEX audit_events_pkey ON edunexus.audit_events USING btree (id)"
+    },
+    {
+      "tablename": "calendar_review_events",
+      "indexdef": "CREATE UNIQUE INDEX calendar_review_events_academic_year_id_calendar_version_key ON edunexus.calendar_review_events USING btree (academic_year_id, calendar_version)"
+    },
+    {
+      "tablename": "calendar_review_events",
+      "indexdef": "CREATE UNIQUE INDEX calendar_review_events_pkey ON edunexus.calendar_review_events USING btree (id)"
+    },
+    {
+      "tablename": "enrollment_correction_sections",
+      "indexdef": "CREATE UNIQUE INDEX enrollment_correction_sections_pkey ON edunexus.enrollment_correction_sections USING btree (correction_id, section_id)"
+    },
+    {
+      "tablename": "enrollment_corrections",
+      "indexdef": "CREATE UNIQUE INDEX enrollment_corrections_enrollment_id_enrollment_version_key ON edunexus.enrollment_corrections USING btree (enrollment_id, enrollment_version)"
+    },
+    {
+      "tablename": "enrollment_corrections",
+      "indexdef": "CREATE UNIQUE INDEX enrollment_corrections_pkey ON edunexus.enrollment_corrections USING btree (id)"
+    },
+    {
+      "tablename": "enrollment_events",
+      "indexdef": "CREATE UNIQUE INDEX enrollment_events_enrollment_id_enrollment_version_key ON edunexus.enrollment_events USING btree (enrollment_id, enrollment_version)"
+    },
+    {
+      "tablename": "enrollment_events",
+      "indexdef": "CREATE UNIQUE INDEX enrollment_events_pkey ON edunexus.enrollment_events USING btree (id)"
+    },
+    {
+      "tablename": "enrollment_record_events",
+      "indexdef": "CREATE UNIQUE INDEX enrollment_record_events_enrollment_id_enrollment_version_key ON edunexus.enrollment_record_events USING btree (enrollment_id, enrollment_version)"
+    },
+    {
+      "tablename": "enrollment_record_events",
+      "indexdef": "CREATE UNIQUE INDEX enrollment_record_events_pkey ON edunexus.enrollment_record_events USING btree (id)"
+    },
+    {
+      "tablename": "enrollments",
+      "indexdef": "CREATE UNIQUE INDEX enrollments_identity_year_key ON edunexus.enrollments USING btree (id, academic_year_id)"
+    },
+    {
+      "tablename": "enrollments",
+      "indexdef": "CREATE UNIQUE INDEX enrollments_pkey ON edunexus.enrollments USING btree (id)"
+    },
+    {
+      "tablename": "enrollments",
+      "indexdef": "CREATE UNIQUE INDEX enrollments_valid_learner_year_idx ON edunexus.enrollments USING btree (learner_id, academic_year_id) WHERE (record_state = 'valid'::text)"
+    },
+    {
+      "tablename": "import_previews",
+      "indexdef": "CREATE UNIQUE INDEX import_previews_pkey ON edunexus.import_previews USING btree (id)"
+    },
+    {
+      "tablename": "instructional_calendars",
+      "indexdef": "CREATE UNIQUE INDEX instructional_calendars_pkey ON edunexus.instructional_calendars USING btree (id)"
+    },
+    {
+      "tablename": "instructional_days",
+      "indexdef": "CREATE UNIQUE INDEX instructional_days_pkey ON edunexus.instructional_days USING btree (id)"
+    },
+    {
+      "tablename": "instructional_days",
+      "indexdef": "CREATE UNIQUE INDEX instructional_days_school_idx ON edunexus.instructional_days USING btree (academic_year_id, day_on) WHERE (section_id IS NULL)"
+    },
+    {
+      "tablename": "instructional_days",
+      "indexdef": "CREATE UNIQUE INDEX instructional_days_section_idx ON edunexus.instructional_days USING btree (section_id, day_on) WHERE (section_id IS NOT NULL)"
+    },
+    {
+      "tablename": "learner_identity_events",
+      "indexdef": "CREATE UNIQUE INDEX learner_identity_events_duplicate_id_duplicate_version_key ON edunexus.learner_identity_events USING btree (duplicate_id, duplicate_version)"
+    },
+    {
+      "tablename": "learner_identity_events",
+      "indexdef": "CREATE UNIQUE INDEX learner_identity_events_pkey ON edunexus.learner_identity_events USING btree (id)"
+    },
+    {
+      "tablename": "learners",
+      "indexdef": "CREATE UNIQUE INDEX learners_lrn_key ON edunexus.learners USING btree (lrn)"
+    },
+    {
+      "tablename": "learners",
+      "indexdef": "CREATE UNIQUE INDEX learners_pkey ON edunexus.learners USING btree (id)"
+    },
+    {
+      "tablename": "lrn_corrections",
+      "indexdef": "CREATE UNIQUE INDEX lrn_corrections_learner_id_learner_version_key ON edunexus.lrn_corrections USING btree (learner_id, learner_version)"
+    },
+    {
+      "tablename": "lrn_corrections",
+      "indexdef": "CREATE UNIQUE INDEX lrn_corrections_pkey ON edunexus.lrn_corrections USING btree (id)"
+    },
+    {
+      "tablename": "record_access_events",
+      "indexdef": "CREATE UNIQUE INDEX record_access_events_pkey ON edunexus.record_access_events USING btree (id)"
+    },
+    {
+      "tablename": "reporting_periods",
+      "indexdef": "CREATE UNIQUE INDEX reporting_periods_academic_year_id_ordinal_key ON edunexus.reporting_periods USING btree (academic_year_id, ordinal)"
+    },
+    {
+      "tablename": "reporting_periods",
+      "indexdef": "CREATE UNIQUE INDEX reporting_periods_pkey ON edunexus.reporting_periods USING btree (id)"
+    },
+    {
+      "tablename": "request_buckets",
+      "indexdef": "CREATE UNIQUE INDEX request_buckets_pkey ON edunexus.request_buckets USING btree (user_id)"
+    },
+    {
+      "tablename": "school_profile",
+      "indexdef": "CREATE UNIQUE INDEX school_profile_pkey ON edunexus.school_profile USING btree (id)"
+    },
+    {
+      "tablename": "section_subject_events",
+      "indexdef": "CREATE UNIQUE INDEX section_subject_events_offering_id_offering_version_key ON edunexus.section_subject_events USING btree (offering_id, offering_version)"
+    },
+    {
+      "tablename": "section_subject_events",
+      "indexdef": "CREATE UNIQUE INDEX section_subject_events_pkey ON edunexus.section_subject_events USING btree (id)"
+    },
+    {
+      "tablename": "section_subjects",
+      "indexdef": "CREATE UNIQUE INDEX section_subjects_pkey ON edunexus.section_subjects USING btree (id)"
+    },
+    {
+      "tablename": "section_subjects",
+      "indexdef": "CREATE UNIQUE INDEX section_subjects_section_id_subject_id_key ON edunexus.section_subjects USING btree (section_id, subject_id)"
+    },
+    {
+      "tablename": "sections",
+      "indexdef": "CREATE UNIQUE INDEX sections_identity_year_grade_key ON edunexus.sections USING btree (id, academic_year_id, grade_level)"
+    },
+    {
+      "tablename": "sections",
+      "indexdef": "CREATE UNIQUE INDEX sections_identity_year_key ON edunexus.sections USING btree (id, academic_year_id)"
+    },
+    {
+      "tablename": "sections",
+      "indexdef": "CREATE UNIQUE INDEX sections_pkey ON edunexus.sections USING btree (id)"
+    },
+    {
+      "tablename": "sections",
+      "indexdef": "CREATE UNIQUE INDEX sections_year_grade_name_idx ON edunexus.sections USING btree (academic_year_id, grade_level, lower(btrim(name)))"
+    },
+    {
+      "tablename": "staff",
+      "indexdef": "CREATE UNIQUE INDEX staff_pkey ON edunexus.staff USING btree (user_id)"
+    },
+    {
+      "tablename": "staff_invitation_events",
+      "indexdef": "CREATE UNIQUE INDEX staff_invitation_events_invitation_id_invitation_version_key ON edunexus.staff_invitation_events USING btree (invitation_id, invitation_version)"
+    },
+    {
+      "tablename": "staff_invitation_events",
+      "indexdef": "CREATE UNIQUE INDEX staff_invitation_events_pkey ON edunexus.staff_invitation_events USING btree (id)"
+    },
+    {
+      "tablename": "staff_invitations",
+      "indexdef": "CREATE UNIQUE INDEX staff_invitation_open_idx ON edunexus.staff_invitations USING btree (email) WHERE (status = 'requested'::text)"
+    },
+    {
+      "tablename": "staff_invitations",
+      "indexdef": "CREATE UNIQUE INDEX staff_invitation_user_idx ON edunexus.staff_invitations USING btree (linked_user_id) WHERE (linked_user_id IS NOT NULL)"
+    },
+    {
+      "tablename": "staff_invitations",
+      "indexdef": "CREATE UNIQUE INDEX staff_invitations_pkey ON edunexus.staff_invitations USING btree (id)"
+    },
+    {
+      "tablename": "subject_events",
+      "indexdef": "CREATE UNIQUE INDEX subject_events_pkey ON edunexus.subject_events USING btree (id)"
+    },
+    {
+      "tablename": "subject_events",
+      "indexdef": "CREATE UNIQUE INDEX subject_events_subject_id_subject_version_key ON edunexus.subject_events USING btree (subject_id, subject_version)"
+    },
+    {
+      "tablename": "subjects",
+      "indexdef": "CREATE UNIQUE INDEX subjects_code_key ON edunexus.subjects USING btree (code)"
+    },
+    {
+      "tablename": "subjects",
+      "indexdef": "CREATE UNIQUE INDEX subjects_pkey ON edunexus.subjects USING btree (id)"
+    }
+  ]
+}

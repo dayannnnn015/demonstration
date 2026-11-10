@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="468pt" height="738.0pt" viewBox="0 0 676 1066" role="img">
+<title>Figure 8. Entity-Relationship Diagram for Attendance Record</title>
+<desc>Selected physical entities and schema-verified relationships. Numeric multiplicities sit next to their entity. Dashed entities are defined in Figure 7.</desc>
+<rect width="676" height="1066" fill="white"/>
+<path d="M 71.2 121.0 L 71.2 159.0 L 4.0 159.0 L 4.0 302.0 L 40.0 302.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 164.8 121.0 L 164.8 127.0 L 260.0 127.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 511.2 121.0 L 511.2 147.0 L 416.0 147.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 71.2 336.0 L 71.2 374.0 L 4.0 374.0 L 4.0 592.0 L 40.0 592.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 291.2 161.0 L 291.2 199.0 L 203.0 199.0 L 203.0 612.0 L 196.0 612.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 338.0 161.0 L 338.0 245.0 L 224.0 245.0 L 224.0 322.0 L 260.0 322.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 384.8 376.0 L 384.8 414.0 L 420.2256 414.0 A 4 4 0 0 1 428.2256 414.0 L 444.0 414.0 L 444.0 552.0 L 480.0 552.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 604.8 316.0 L 604.8 354.0 L 672.0 354.0 L 672.0 572.0 L 636.0 572.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 384.8 161.0 L 384.8 236.0 L 342.0 236.0 A 4 4 0 0 0 334.0 236.0 L 213.2256 236.0 L 213.2256 552.0 L 260.0 552.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 164.8 901.0 L 164.8 939.0 L 433.2256 939.0 L 433.2256 612.0 L 416.0 612.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 511.2 316.0 L 511.2 475.0 L 448.0 475.0 A 4 4 0 0 0 440.0 475.0 L 433.2256 475.0 L 433.2256 579.9 L 460.0 579.9 A 4 4 0 0 1 468.0 579.9 L 473.0 579.9 L 473.0 807.0 L 480.0 807.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<path d="M 604.8 121.0 L 604.8 159.0 L 424.2256 159.0 L 424.2256 570.9 L 429.2256 570.9 A 4 4 0 0 1 437.2256 570.9 L 464.0 570.9 L 464.0 730.0 L 469.0 730.0 A 4 4 0 0 1 477.0 730.0 L 672.0 730.0 L 672.0 847.0 L 636.0 847.0" fill="none" stroke="#222" stroke-width="1.1"/>
+<rect x="40" y="55" width="156" height="66" fill="white" stroke="#111" stroke-width="1.1" stroke-dasharray="5 3"/>
+<rect x="41" y="56" width="154" height="41" fill="white"/>
+<path d="M 40 97 H 196" stroke="#111" stroke-width="0.9"/>
+<text x="118" y="81" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">ACADEMIC_YEARS</text>
+<text x="43" y="111" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">PK</text>
+<text x="79" y="111" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">id</text>
+<rect x="260" y="55" width="156" height="106" fill="white" stroke="#111" stroke-width="1.1" stroke-dasharray="5 3"/>
+<rect x="261" y="56" width="154" height="41" fill="white"/>
+<path d="M 260 97 H 416" stroke="#111" stroke-width="0.9"/>
+<text x="338" y="81" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">SECTIONS</text>
+<text x="263" y="111" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">PK</text>
+<text x="299" y="111" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">id</text>
+<path d="M 261 117 H 415" stroke="#ccc" stroke-width="0.4"/>
+<text x="263" y="131" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="299" y="131" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">academic_year_id</text>
+<path d="M 261 137 H 415" stroke="#ccc" stroke-width="0.4"/>
+<text x="263" y="151" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="299" y="151" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">adviser_user_id ?</text>
+<rect x="480" y="55" width="156" height="66" fill="white" stroke="#111" stroke-width="1.1" stroke-dasharray="5 3"/>
+<rect x="481" y="56" width="154" height="41" fill="white"/>
+<path d="M 480 97 H 636" stroke="#111" stroke-width="0.9"/>
+<text x="558" y="81" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">STAFF</text>
+<text x="483" y="111" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">PK/FK</text>
+<text x="519" y="111" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">user_id</text>
+<rect x="40" y="250" width="156" height="86" fill="white" stroke="#111" stroke-width="1.1"/>
+<rect x="41" y="251" width="154" height="41" fill="#e9edf1"/>
+<path d="M 40 292 H 196" stroke="#111" stroke-width="0.9"/>
+<text x="118" y="268" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">INSTRUCTIONAL_</text>
+<text x="118" y="283" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">CALENDARS</text>
+<text x="43" y="306" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">PK/FK</text>
+<text x="79" y="306" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">id</text>
+<path d="M 41 312 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="326" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="79" y="326" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">version</text>
+<rect x="260" y="250" width="156" height="126" fill="white" stroke="#111" stroke-width="1.1"/>
+<rect x="261" y="251" width="154" height="41" fill="#e9edf1"/>
+<path d="M 260 292 H 416" stroke="#111" stroke-width="0.9"/>
+<text x="338" y="276" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">ATTENDANCE_DAYS</text>
+<text x="263" y="306" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">PK</text>
+<text x="299" y="306" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">id</text>
+<path d="M 261 312 H 415" stroke="#ccc" stroke-width="0.4"/>
+<text x="263" y="326" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="299" y="326" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">section_id</text>
+<path d="M 261 332 H 415" stroke="#ccc" stroke-width="0.4"/>
+<text x="263" y="346" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="299" y="346" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">day_on</text>
+<path d="M 261 352 H 415" stroke="#ccc" stroke-width="0.4"/>
+<text x="263" y="366" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="299" y="366" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">version</text>
+<rect x="480" y="250" width="156" height="66" fill="white" stroke="#111" stroke-width="1.1" stroke-dasharray="5 3"/>
+<rect x="481" y="251" width="154" height="41" fill="white"/>
+<path d="M 480 292 H 636" stroke="#111" stroke-width="0.9"/>
+<text x="558" y="276" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">ENROLLMENTS</text>
+<text x="483" y="306" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">PK</text>
+<text x="519" y="306" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">id</text>
+<rect x="40" y="520" width="156" height="186" fill="white" stroke="#111" stroke-width="1.1"/>
+<rect x="41" y="521" width="154" height="41" fill="#e9edf1"/>
+<path d="M 40 562 H 196" stroke="#111" stroke-width="0.9"/>
+<text x="118" y="538" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">INSTRUCTIONAL_</text>
+<text x="118" y="553" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">DAYS</text>
+<text x="43" y="576" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">PK</text>
+<text x="79" y="576" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">id</text>
+<path d="M 41 582 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="596" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="79" y="596" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">academic_year_id</text>
+<path d="M 41 602 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="616" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="79" y="616" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">section_id ?</text>
+<path d="M 41 622 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="636" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="79" y="636" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">day_on</text>
+<path d="M 41 642 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="656" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="79" y="656" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">configured</text>
+<path d="M 41 662 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="676" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="79" y="676" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">am ?</text>
+<path d="M 41 682 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="696" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="79" y="696" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">pm ?</text>
+<rect x="260" y="480" width="156" height="166" fill="white" stroke="#111" stroke-width="1.1"/>
+<rect x="261" y="481" width="154" height="41" fill="#e9edf1"/>
+<path d="M 260 522 H 416" stroke="#111" stroke-width="0.9"/>
+<text x="338" y="498" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">ATTENDANCE_</text>
+<text x="338" y="513" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">MONTHS</text>
+<text x="263" y="536" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">PK</text>
+<text x="299" y="536" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">id</text>
+<path d="M 261 542 H 415" stroke="#ccc" stroke-width="0.4"/>
+<text x="263" y="556" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="299" y="556" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">section_id</text>
+<path d="M 261 562 H 415" stroke="#ccc" stroke-width="0.4"/>
+<text x="263" y="576" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="299" y="576" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">academic_year_id</text>
+<path d="M 261 582 H 415" stroke="#ccc" stroke-width="0.4"/>
+<text x="263" y="596" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="299" y="596" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">month_on</text>
+<path d="M 261 602 H 415" stroke="#ccc" stroke-width="0.4"/>
+<text x="263" y="616" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="299" y="616" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">snapshot_id</text>
+<path d="M 261 622 H 415" stroke="#ccc" stroke-width="0.4"/>
+<text x="263" y="636" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="299" y="636" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">status</text>
+<rect x="480" y="480" width="156" height="166" fill="white" stroke="#111" stroke-width="1.1"/>
+<rect x="481" y="481" width="154" height="41" fill="#e9edf1"/>
+<path d="M 480 522 H 636" stroke="#111" stroke-width="0.9"/>
+<text x="558" y="506" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">ATTENDANCE_MARKS</text>
+<text x="483" y="536" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">PK</text>
+<text x="519" y="536" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">id</text>
+<path d="M 481 542 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="556" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="519" y="556" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">attendance_day_id</text>
+<path d="M 481 562 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="576" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="519" y="576" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">enrollment_id</text>
+<path d="M 481 582 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="596" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="519" y="596" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">day_on</text>
+<path d="M 481 602 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="616" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="519" y="616" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">am ?</text>
+<path d="M 481 622 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="636" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="519" y="636" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">pm ?</text>
+<rect x="40" y="735" width="156" height="166" fill="white" stroke="#111" stroke-width="1.1"/>
+<rect x="41" y="736" width="154" height="41" fill="#e9edf1"/>
+<path d="M 40 777 H 196" stroke="#111" stroke-width="0.9"/>
+<text x="118" y="753" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">ATTENDANCE_</text>
+<text x="118" y="768" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">MONTH_SNAPSHOTS</text>
+<text x="43" y="791" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">PK</text>
+<text x="79" y="791" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">id</text>
+<path d="M 41 797 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="811" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="79" y="811" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">section_id</text>
+<path d="M 41 817 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="831" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="79" y="831" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">academic_year_id</text>
+<path d="M 41 837 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="851" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="79" y="851" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">month_on</text>
+<path d="M 41 857 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="871" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="79" y="871" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">payload</text>
+<path d="M 41 877 H 195" stroke="#ccc" stroke-width="0.4"/>
+<text x="43" y="891" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="79" y="891" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">data_hash</text>
+<rect x="480" y="735" width="156" height="186" fill="white" stroke="#111" stroke-width="1.1"/>
+<rect x="481" y="736" width="154" height="41" fill="#e9edf1"/>
+<path d="M 480 777 H 636" stroke="#111" stroke-width="0.9"/>
+<text x="558" y="753" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">ATTENDANCE_</text>
+<text x="558" y="768" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#111">FOLLOWUPS</text>
+<text x="483" y="791" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">PK</text>
+<text x="519" y="791" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">id</text>
+<path d="M 481 797 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="811" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="519" y="811" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">enrollment_id</text>
+<path d="M 481 817 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="831" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="519" y="831" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">section_id</text>
+<path d="M 481 837 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="851" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="519" y="851" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">assignee_user_id</text>
+<path d="M 481 857 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="871" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="519" y="871" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">category</text>
+<path d="M 481 877 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="891" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="519" y="891" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">status</text>
+<path d="M 481 897 H 635" stroke="#ccc" stroke-width="0.4"/>
+<text x="483" y="911" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111"></text>
+<text x="519" y="911" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="normal" text-anchor="start" fill="#111">opening_evidence</text>
+<text x="78.2" y="141.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">1</text>
+<text x="10.6512" y="296" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..1</text>
+<text x="171.8" y="141.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">1</text>
+<text x="228.726" y="121" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..N</text>
+<text x="518.2" y="141.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..1</text>
+<text x="426" y="141" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..N</text>
+<text x="78.2" y="356.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">1</text>
+<text x="8.7256" y="586" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..N</text>
+<text x="298.2" y="181.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..1</text>
+<text x="206" y="606" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..N</text>
+<text x="345" y="181.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">1</text>
+<text x="228.726" y="316" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..N</text>
+<text x="391.8" y="396.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">1</text>
+<text x="448.726" y="546" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..N</text>
+<text x="611.8" y="336.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">1</text>
+<text x="646" y="566" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..N</text>
+<text x="391.8" y="181.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">1</text>
+<text x="228.726" y="546" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..N</text>
+<text x="171.8" y="921.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">1</text>
+<text x="426" y="606" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..1</text>
+<text x="518.2" y="336.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">1</text>
+<text x="448.726" y="801" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..N</text>
+<text x="611.8" y="141.6" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">1</text>
+<text x="646" y="841" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">0..N</text>
+<text x="40" y="986" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">PK</text>
+<text x="93" y="986" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">Primary key</text>
+<text x="350" y="986" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">1</text>
+<text x="403" y="986" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">Exactly one</text>
+<text x="40" y="1004" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">FK</text>
+<text x="93" y="1004" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">Foreign key (or component)</text>
+<text x="350" y="1004" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">0..1</text>
+<text x="403" y="1004" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">Optional one</text>
+<text x="40" y="1022" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">UQ</text>
+<text x="93" y="1022" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">Single-column unique key</text>
+<text x="350" y="1022" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">0..N</text>
+<text x="403" y="1022" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">Zero or many</text>
+<text x="40" y="1040" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">?</text>
+<text x="93" y="1040" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">Nullable attribute</text>
+<text x="350" y="1040" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="bold" text-anchor="start" fill="#111">Dashed</text>
+<text x="403" y="1040" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">Defined in another figure</text>
+<text x="40" y="1060" font-family="Helvetica,Arial,sans-serif" font-size="11.6" font-weight="normal" text-anchor="start" fill="#111">Selected attributes and relationships; additional context FKs and journals are omitted.</text>
+</svg>

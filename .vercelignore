@@ -1,0 +1,8 @@
+.local
+.env*
+tests
+docs
+coverage
+.github
+dist
+*.docx
